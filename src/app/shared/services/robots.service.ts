@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Robot, Nature } from '../robot-table/interfaces/robot.interface';
+import { Robot, Nature } from '../components/robot-table/interfaces/robot.interface';
+
 
 @Injectable({
   providedIn: 'root'

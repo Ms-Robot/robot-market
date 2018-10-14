@@ -1,5 +1,29 @@
 <button (click)="showRobotForm = !showRobotForm" class="button">ADD ROBOT</button>
 <!-- <app-new-robot-form *ngIf="showRobotForm" ></app-new-robot-form> -->
-<app-robot-table></app-robot-table>
+<table>
+    <button (click)="robotsService.addRobot()" class="button">ADD ROBOT</button>
+    <tr id="td">
+        <th>Name</th>
+        <th>Type</th>
+        <th>Nature</th>
+        <th>Parts No</th>
+    </tr>
+    <tr *ngFor="let robot of robots" class="table">
+        <td>{{robot.name}}</td>
+        <td>{{robot.type}}</td>
+        <td>{{robot.nature}}</td>
+        <td>{{robot.numberOfParts}}</td>
+    </tr>
+</table>
+
+<div>
+    <div *ngFor="let robot of robots">
+        {{robot.name}}
+        more info about robots
+    </div>
+
+</div>
+
+<!-- <img src="https://media.giphy.com/media/LNKnocDWwv6CI/giphy.gif" alt="robot factory" class="factory"> -->
 
 <!-- <button (click)="getQuoteFromService()" class="button">GET QUOTE</button> -->
