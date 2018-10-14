@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Robot } from './interfaces/robot.interface';
+import { RobotsService } from '../../../services/robots.service';
 
 @Component({
   selector: 'app-robot-table',
@@ -6,10 +8,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./robot-table.component.css']
 })
 export class RobotTableComponent implements OnInit {
+  robots:Robot[]=[]
 
-  constructor() { }
+  constructor(public robotsService: RobotsService) { }
 
   ngOnInit() {
+    this.robots = this.robotsService.getRobots()
   }
-
+ 
 }

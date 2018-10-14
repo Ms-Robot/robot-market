@@ -1,0 +1,21 @@
+.table{
+    background-color: lightblue;
+    color: darkblue;
+    border: 1px solid black;
+    
+}
+#td {
+    background-color: #37417C;
+    color:lightblue;  
+    border: 1px solid black;
+}
+.factory {
+    margin: 10px;
+}
+.button {
+    background-color:#5586C9;
+    color: #252648;
+    border-radius: 6px;
+    width: 70px;
+    height: 30px;
+}
