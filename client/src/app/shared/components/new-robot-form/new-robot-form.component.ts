@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Nature } from '../robot-table/interfaces/robot.interface';
+import { Nature } from '../../interfaces/robot.interface';
 
 @Component({
   selector: 'app-new-robot-form',
