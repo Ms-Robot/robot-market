@@ -12,14 +12,11 @@ export class NewRobotFormComponent implements OnInit {
   robotNatureVariable: Nature;
   robotNumberOfPartsVariable: number;
 
-
-  constructor() { }
-
   ngOnInit() {
   }
 
   saveRobot() {
-    console.log(this.robotNameVariable)
+    console.log(this.robotNameVariable);
   }
 
 }

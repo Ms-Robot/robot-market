@@ -1,40 +1,25 @@
 import { Injectable } from '@angular/core';
-import { Nature, Robot } from '../interfaces/robot.interface';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class RobotsService {
-  robots: Robot[] = [{
-    name: 'Mischa',
-    type: 'Helper',
-    nature: Nature.good,
-    numberOfParts: 42
-  },
-    {
-      name: 'Glutton',
-      type: 'Feeder',
-      nature: Nature.bad,
-      numberOfParts: 9999999999999999999
-    },
-    {
-      name: 'Serce',
-      type: 'Motivator',
-      nature: Nature.good,
-      numberOfParts: 1
-    }];
+
+  public constructor(private httpClient: HttpClient) {
+  }
 
   getRobots() {
-    return this.robots;
+    return this.httpClient.get('http://localhost:3000/robots');
   }
 
   addRobot() {
-    this.robots.push({
-      name: 'Lucifer',
-      type: 'Allurer ',
-      nature: Nature.bad,
-      numberOfParts: 666
-    });
+    // this.robots.push({
+    //   name: 'Lucifer',
+    //   type: 'Allurer ',
+    //   nature: Nature.bad,
+    //   numberOfParts: 666
+    // });
   }
 
 }
