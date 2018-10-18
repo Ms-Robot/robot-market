@@ -4,7 +4,6 @@ import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
-import { MainComponent } from './main/main.component';
 import { RobotListComponent } from './main/robot-list/robot-list.component';
 
 import { HomeComponent } from './main/home/home.component';
@@ -16,7 +15,6 @@ import { HeaderComponent } from './shared/components/header/header.component';
   declarations: [
     AppComponent,
     NewRobotFormComponent,
-    MainComponent,
     RobotListComponent,
     HeaderComponent,
     HomeComponent,
